@@ -1,0 +1,32 @@
+{
+  "name": "headlines",
+  "version": "1.0.0",
+  "description": "Collection of headlines",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "deploy": "now -e ophobe_email=@ophobe_email -e ophobe_github_access_token=@ophobe_github_access_token"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ophobe/headlines.git"
+  },
+  "keywords": [
+    "headlines"
+  ],
+  "author": "Ophobe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ophobe/headlines/issues"
+  },
+  "homepage": "https://github.com/ophobe/headlines#readme",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "cheerio": "^0.22.0",
+    "dotenv": "^4.0.0",
+    "express.co": "^1.0.3",
+    "gh-commit": "^1.0.0",
+    "moment": "^2.17.1"
+  }
+}
