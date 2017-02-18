@@ -5,6 +5,10 @@ const commit = require('../service/commit/commit');
 const sites = require('../service/sites/sites');
 
 module.exports = function *(req, res) {
+  if (!sites.hasOwnProperty(req.params.source)) {
+    res.json({error: 'Invalid route'});
+  }
+
   const DOM = yield axios.get(sites[req.params.source]).then(response => response.data);
 
   const content = require('../parsers/' + req.params.source)(DOM);

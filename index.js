@@ -13,7 +13,7 @@ require('dotenv').config();
  */
 
 app.get('/fetch/:source', require('./controllers/base'));
-app.get('*', (req, res) => res.send('Invalid route'));
+app.get('*', (req, res) => res.json({error: 'Invalid route'}));
 
 /*
  |----------------------------------------------------------------------------------------------------------------------
@@ -21,4 +21,4 @@ app.get('*', (req, res) => res.send('Invalid route'));
  |----------------------------------------------------------------------------------------------------------------------
  */
 
-app.listen(3000, () => console.log('Application running on http://localhost:3000'));
+app.listen(process.env.PORT, () => console.log('Application running on http://localhost:' + process.env.PORT));
