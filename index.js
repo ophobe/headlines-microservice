@@ -2,8 +2,6 @@
 
 const express = require('express.co');
 const app = express();
-const cheerio = require('cheerio');
-const fs = require('fs');
 require('dotenv').config();
 
 /*
