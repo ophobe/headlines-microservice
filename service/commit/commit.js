@@ -8,7 +8,7 @@ git.config.repo = {author: process.env.REPO_AUTHOR, name: process.env.REPO_NAME}
 
 module.exports = function (source, content) {
   return git.commit([{
-    path: source + '/' + moment().format('DD-MM-YYYY') + '.txt',
-    content
+    path: source + '/' + moment().format('DD-MM-YYYY-H-s') + '.txt',
+    content: content.join('\n')
   }]);
 }
